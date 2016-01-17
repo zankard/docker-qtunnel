@@ -9,4 +9,4 @@ RUN deps="build-essential git make golang ca-certificates" \
     && make \
     && apt-get purge -y --auto-remove git make build-essential
 
-ENTRYPOINT ["bin/qtunnel", "-listen=:60100", "-clientmode=true" "-crypto=aes256cfb"]
+ENTRYPOINT ["bin/qtunnel", "-crypto=aes256cfb"]
